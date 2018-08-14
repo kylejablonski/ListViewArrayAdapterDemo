@@ -16,11 +16,5 @@ class MainActivityTwo : AppCompatActivity() {
 
         val listView = findViewById<View>(R.id.list_view) as ListView
         listView.adapter = ContactArrayAdapter(ContactObject.getContactList(), this, R.layout.layout_contact)
-
-        // add a listener
-        listView.onItemClickListener = AdapterView.OnItemClickListener { adapterView, view, i, l ->
-            val name = adapterView.getItemAtPosition(i) as String
-            Toast.makeText(this@MainActivityTwo, String.format(Locale.getDefault(), "%s %s tapped!", name), Toast.LENGTH_SHORT).show()
-        }
     }
 }
